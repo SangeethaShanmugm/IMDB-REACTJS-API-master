@@ -1,7 +1,10 @@
-*{
-  margin: 0;
+* {
+  margin: 40;
   padding: 0;
 }
-html,body,#root,.App{
+html,
+body,
+#root,
+.App {
   min-height: 100%;
 }

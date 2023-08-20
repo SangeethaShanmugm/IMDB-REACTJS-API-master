@@ -1,20 +1,22 @@
-import './App.css';
-import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
-import Header from './components/Header/Header';
-import Home from './Pages/Home/Home';
-import Movielist from './components/Movielist/Movielist';
-import Movie from './Pages/Moviedetail/Movie';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Home from "./Pages/Home/Home";
+import Movielist from "./components/Movielist/Movielist";
+import Movie from "./Pages/Moviedetail/Movie";
+import Books from "./components/Books/Books";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Header/>
+        <Header />
         <Routes>
-          <Route index element={<Home/>}></Route>
-          <Route path='movie/:id' element={<Movie/>}></Route> 
-          <Route path='movies/:type' element={<Movielist/>}></Route>
-          <Route path='/*' element={<h1>404 Error</h1>}></Route>
+          <Route index element={<Home />}></Route>
+          <Route path="movie/:id" element={<Movie />}></Route>
+          <Route path="movies/:type" element={<Movielist />}></Route>
+          <Route path="books" element={<Books />}></Route>
+          <Route path="/*" element={<h1>404 Error</h1>}></Route>
         </Routes>
       </Router>
     </div>

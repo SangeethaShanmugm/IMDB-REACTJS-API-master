@@ -5,21 +5,24 @@ import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
 import Movielist from "../../components/Movielist/Movielist";
 import { API } from "../../global";
+import Books from "../../components/Books/Books";
 
 function Home() {
   const [popularMovies, setPopularmovies] = useState([]);
   useEffect(() => {
     // fetch("https://api.themoviedb.org/3/movie/popular?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US")
-    fetch(`${API}`)
-      .then((res) => res.json())
-      .then((data) => setPopularmovies(data.results));
+    // fetch(`${API}`)
+    //   .then((res) => res.json())
+    //   .then((data) => setPopularmovies(data.results));
   }, []);
 
   //   console.log(popularMovies)
   return (
     <>
       <div className="poster">
-        <Carousel
+        <h1>BookList</h1>
+        <Books />
+        {/* <Carousel
           showThumbs={false}
           autoPlay={true}
           transitionTime={5}
@@ -55,8 +58,8 @@ function Home() {
               </div>
             </Link>
           ))}
-        </Carousel>
-        <Movielist />
+        </Carousel> */}
+        {/* <Movielist /> */}
       </div>
     </>
   );

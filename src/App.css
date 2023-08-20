@@ -3,3 +3,25 @@
   color: rgb(255, 255, 255);
   font-family: sans-serif;
 }
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.book-container {
+  width: 350px;
+}
+
+.book-poster {
+  width: 350px;
+  height: 520px;
+  object-fit: cover;
+}
+
+.book-spec {
+  display: flex;
+  justify-content: space-between;
+}
